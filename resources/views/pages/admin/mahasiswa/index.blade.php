@@ -50,7 +50,7 @@
                                             {{ $item->address }}
                                         </td>
                                         <td>
-                                            {{ $item->jurusan['jurusan_name'] }}
+                                            {{ $item->jurusan['jurusan_name'] ?? '-' }}
                                         </td>
                                         <td>
                                             <a href="{{ route('show.mahasiswa', $item->nim) }}" class="btn btn-primary">

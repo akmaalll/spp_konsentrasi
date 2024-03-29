@@ -11,7 +11,7 @@
                 class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                 <img alt="image" src="https://ui-avatars.com/api/?background=fff&color=0D8ABC&name="
                     class="rounded-circle mr-1">
-                <div class="d-sm-none d-lg-inline-block">Hello, </div>
+                <div class="d-sm-none d-lg-inline-block">Hello, {{ Auth::user()->name }}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-title">INFORMASI USER</div>

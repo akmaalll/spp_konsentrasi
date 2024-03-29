@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('password');
             $table->text('address');
             $table->string('phone');
-            $table->foreignId('jurusan_id')->constrained('Jurusans')->cascadeOnDelete();
-            $table->foreignId('spp_id')->constrained('Spps')->cascadeOnDelete();
+            $table->foreignId('jurusan_id')->nullable()->constrained('Jurusans')->cascadeOnDelete();
+            $table->foreignId('spp_id')->nullable()->constrained('Spps')->cascadeOnDelete();
             $table->timestamps();
         });
     }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\MahasiswaController;
+use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,21 +19,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'prosesLogin']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
-Route::prefix('admin')->group(function () {
 
-    Route::get('/', function () {
-        return view('pages.admin.index');
-    });
+Route::group(['prefix' => '', 'namespace' => 'App\Http\Controllers\admin', 'middleware' => 'auth:mahasiswa,web'], function () {
 
-    Route::prefix('mahasiswa')->group(function () {
-        Route::get('/', [MahasiswaController::class, 'index'])->name('index.mahasiswa');
-        Route::get('/detail/{nim}', [MahasiswaController::class, 'show'])->name('show.mahasiswa');
-        Route::get('/create', [MahasiswaController::class, 'create'])->name('create.mahasiswa');
-        Route::post('/store', [MahasiswaController::class, 'store'])->name('store.mahasiswa');
-        Route::get('/edit/{id}', [MahasiswaController::class, 'edit'])->name('edit.mahasiswa');
-        Route::put('/update', [MahasiswaController::class, 'update'])->name('update.mahasiswa');
-        Route::delete('/delete{id}', [MahasiswaController::class, 'destroy'])->name('destroy.mahasiswa');
+    Route::prefix('admin')->group(function () {
+
+        Route::get('/', 'HomeController@index')->name('dashboard');
+
+        Route::prefix('mahasiswa')->group(function () {
+            Route::get('/', 'MahasiswaController@index')->name('index.mahasiswa');
+            Route::get('/detail/{nim}', 'MahasiswaController@show')->name('show.mahasiswa');
+            Route::get('/create', 'MahasiswaController@create')->name('create.mahasiswa');
+            Route::post('/store', 'MahasiswaController@store')->name('store.mahasiswa');
+            Route::get('/edit/{id}', 'MahasiswaController@edit')->name('edit.mahasiswa');
+            Route::put('/update', 'MahasiswaController@update')->name('update.mahasiswa');
+            Route::delete('/delete{id}', 'MahasiswaController@destroy')->name('destroy.mahasiswa');
+        });
     });
 });

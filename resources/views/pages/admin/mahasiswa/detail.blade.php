@@ -45,7 +45,7 @@
                         </tr>
                         <tr>
                             <th>Jurusan</th>
-                            <td>{{ $item->jurusan['jurusan_name'] }}</td>
+                            <td>{{ $item->jurusan['jurusan_name'] ?? '-' }}</td>
                         </tr>
                     </tbody>
                 </table>
