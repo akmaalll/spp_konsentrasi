@@ -1,46 +1,33 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Mahasiswa;
 
 use App\Http\Controllers\Controller;
-use App\Models\Mahasiswa;
 use App\Models\Payment;
-use App\Models\Spp;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class PaymentController extends Controller
+class SppController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $items = Payment::where('nim', Auth::user()->nim)->with('mahasiswa', 'fee')->get();
+        // dd($items);
+
+        return view('pages.mahasiswa.payment.index', [
+            'items' => $items
+        ]);
     }
 
-    public function getNamaSpp(Request $request)
-    {
-        $id = $request->id;
-        $spp = Spp::where('id', $id)->first();
-        // dd($spp);
-
-        return response()->json(['semester' => $spp->semester, 'nominal' => $spp->nominal, 'year' => $spp->year]);
-    }
-    public function getNamaMahasiswa(Request $request)
-    {
-        $nim = $request->nim;
-        $mahasiswa = Mahasiswa::where('nim', $nim)->first();
-
-        return response()->json(['name' => $mahasiswa->name]);
-    }
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        $mahasiswas = Mahasiswa::all();
-        $spps = Spp::all();
-        return view('pages.admin.payment.create', compact('mahasiswas', 'spps'));
+        //
     }
 
     /**
@@ -48,11 +35,7 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        // dd($data);
-        Payment::create($data);
-
-        return redirect()->route('dashboard_admin');
+        //
     }
 
     /**

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Jurusan;
 use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class MahasiswaController extends Controller
 {
@@ -35,6 +36,7 @@ class MahasiswaController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $data['password'] = Hash::make($request->password);
         // dd($data);
         Mahasiswa::create($data);
 

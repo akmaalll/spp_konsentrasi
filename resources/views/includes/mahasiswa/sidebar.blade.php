@@ -14,7 +14,7 @@
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-dollar-sign"></i>
                 <span>SPP</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link" href="">Data SPP Kamu</a></li>
+                <li><a class="nav-link" href="{{ route('spp.mahasiswa.index') }}">Data SPP Kamu</a></li>
             </ul>
         </li>
     </ul>

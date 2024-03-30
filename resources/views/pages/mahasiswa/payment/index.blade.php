@@ -1,57 +1,71 @@
-@extends('layouts.staff.dashboard')
+@extends('layouts.mahasiswa.dashboard')
 
 @section('title', 'Data SPP')
 @section('content')
 
-<section class="section">
-    <div class="card card-primary">
-        <div class="card-body">
-            <h2 class="card-title text-dark">PENGELOLAAN DATA SPP</h2>
-            <hr>
-            <p class="card-text">Berikut merupakan halaman pengelolaan data SPP di aplikasi SPPIE.
+    <section class="section">
+        <div class="card card-primary">
+            <div class="card-body">
+                <h2 class="card-title text-dark">PENGELOLAAN DATA SPP</h2>
+                <hr>
+                <p class="card-text">Berikut merupakan halaman pengelolaan data SPP di aplikasi SPPIE.
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card card-primary p-4">
-                <div class="table-responsive">
-                    <table id="example" class="table align-items-center table-flush">
-                        <thead class="thead-light">
-                            <tr>
-                                <th scope="col">NISN</th>
-                                <th scope="col">NAMA SISWA</th>
-                                <th scope="col">BULAN</th>
-                                <th scope="col">TAHUN</th>
-                                <th scope="col">TOTAL BAYAR</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @forelse ($items as $item)
-                            <tr>
-                                <th scope="row">
-                                    {{ $item->nisn }}
-                                </th>
-                                <td>
-                                    {{ $item->name }}
-                                </td>
-                                <td>
-                                    {{ $item->month }}
-                                </td>
-                                <td>
-                                    {{ $item->year }}
-                                </td>
-                                <td>
-                                    {{ $item->total_payment }}
-                                </td>
-                            </tr>
-                            @empty
-                            @endforelse
-                        </tbody>
-                    </table>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-primary p-4">
+                    <div class="table-responsive">
+                        <table id="example" class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">NISN</th>
+                                    <th scope="col">NAMA MAHASISWA</th>
+                                    <th scope="col">JURUSAN</th>
+                                    <th scope="col">SEMESTER</th>
+                                    <th scope="col">TAHUN</th>
+                                    <th scope="col">TOTAL BAYAR</th>
+                                    <th scope="col">STATUS</th>
+                                    <th scope="col">OPSI</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse ($items as $item)
+                                    <tr>
+                                        <th scope="row">
+                                            {{ $item->nim }}
+                                        </th>
+                                        <td>
+                                            {{ $item->mahasiswa->name }}
+                                        </td>
+                                        <td>
+                                            {{ $item->mahasiswa->jurusan->jurusan_name }}
+                                        </td>
+                                        <td>
+                                            {{ $item->fee->semester }}
+                                        </td>
+                                        <td>
+                                            {{ $item->fee->year }}
+                                        </td>
+                                        <td>
+                                            {{ $item->fee->nominal }}
+                                        </td>
+                                        <td>
+                                            {{ $item->status }}
+                                        </td>
+                                        <td>
+                                            <a href="" class="btn btn-primary">
+                                                bayar
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @empty
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 @endsection

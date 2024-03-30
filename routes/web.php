@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Mahasiswa\SppController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -75,6 +76,7 @@ Route::group(['prefix' => '', 'namespace' => 'App\Http\Controllers\mahasiswa', '
         Route::get('/', 'HomeController@index')->name('dashboard_mahasiswa');
 
         Route::prefix('spp')->group(function () {
+            Route::get('/', [SppController::class, 'index'])->name('spp.mahasiswa.index');
         });
     });
 });
