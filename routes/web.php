@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\MahasiswaController;
+use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,11 +25,11 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 
-Route::group(['prefix' => '', 'namespace' => 'App\Http\Controllers\admin', 'middleware' => 'auth:mahasiswa,web'], function () {
+Route::group(['prefix' => '', 'namespace' => 'App\Http\Controllers\admin', 'middleware' => 'auth:web'], function () {
 
     Route::prefix('admin')->group(function () {
 
-        Route::get('/', 'HomeController@index')->name('dashboard');
+        Route::get('/', 'HomeController@index')->name('dashboard_admin');
 
         Route::prefix('mahasiswa')->group(function () {
             Route::get('/', 'MahasiswaController@index')->name('index.mahasiswa');
@@ -39,6 +39,42 @@ Route::group(['prefix' => '', 'namespace' => 'App\Http\Controllers\admin', 'midd
             Route::get('/edit/{id}', 'MahasiswaController@edit')->name('edit.mahasiswa');
             Route::put('/update', 'MahasiswaController@update')->name('update.mahasiswa');
             Route::delete('/delete{id}', 'MahasiswaController@destroy')->name('destroy.mahasiswa');
+        });
+
+        Route::prefix('jurusan')->group(function () {
+            Route::get('/', 'JurusanController@index')->name('index.jurusan');
+            Route::get('/detail/{nim}', 'JurusanController@show')->name('show.jurusan');
+            Route::get('/create', 'JurusanController@create')->name('create.jurusan');
+            Route::post('/store', 'JurusanController@store')->name('store.jurusan');
+            Route::get('/edit/{id}', 'JurusanController@edit')->name('edit.jurusan');
+            Route::put('/update', 'JurusanController@update')->name('update.jurusan');
+            Route::delete('/delete{id}', 'JurusanController@destroy')->name('destroy.jurusan');
+        });
+
+        Route::prefix('spp')->group(function () {
+            Route::get('/', 'SppController@index')->name('index.spp');
+            Route::get('/detail/{nim}', 'SppController@show')->name('show.spp');
+            Route::get('/create', 'SppController@create')->name('create.spp');
+            Route::post('/store', 'SppController@store')->name('store.spp');
+            Route::get('/edit/{id}', 'SppController@edit')->name('edit.spp');
+            Route::put('/update', 'SppController@update')->name('update.spp');
+            Route::delete('/delete{id}', 'SppController@destroy')->name('destroy.spp');
+        });
+
+        Route::get('/get-nama-mahasiswa', [PaymentController::class, 'getNamaMahasiswa']);
+        Route::get('/get-nama-spp', [PaymentController::class, 'getNamaSpp']);
+        Route::get('/transaksi', [PaymentController::class, 'create'])->name('create.payment');
+        Route::post('/transaksi/store', [PaymentController::class, 'store'])->name('store.payment');
+    });
+});
+
+Route::group(['prefix' => '', 'namespace' => 'App\Http\Controllers\mahasiswa', 'middleware' => 'auth:mahasiswa'], function () {
+
+    Route::prefix('mhs')->group(function () {
+
+        Route::get('/', 'HomeController@index')->name('dashboard_mahasiswa');
+
+        Route::prefix('spp')->group(function () {
         });
     });
 });

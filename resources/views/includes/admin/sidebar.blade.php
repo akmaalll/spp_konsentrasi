@@ -8,7 +8,8 @@
     <ul class="sidebar-menu">
         <li class="menu-header">Dashboard</li>
         <li class="nav-item dropdown ">
-            <a href="" class="nav-link"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+            <a href="{{ route('dashboard_admin') }}" class="nav-link"><i
+                    class="fas fa-desktop"></i><span>Dashboard</span></a>
         </li>
         <li class="menu-header">Pengelolaan Data Mahasiswa</li>
         <li class="nav-item dropdown ">
@@ -24,8 +25,8 @@
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-user-friends"></i>
                 <span>Jurusan</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link" href="">Data Jurusan</a></li>
-                <li><a class="nav-link" href="">Tambah Data </a></li>
+                <li><a class="nav-link" href="{{ route('index.jurusan') }}">Data Jurusan</a></li>
+                <li><a class="nav-link" href="{{ route('create.jurusan') }}">Tambah Data </a></li>
             </ul>
         </li>
         <li class="menu-header">Pengelolaan Data SPP</li>
@@ -33,14 +34,14 @@
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-dollar-sign"></i>
                 <span>SPP</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link" href="">Data SPP</a></li>
-                <li><a class="nav-link" href="">Log History SPP</a></li>
+                <li><a class="nav-link" href="{{ route('index.spp') }}">Data SPP</a></li>
+                <li><a class="nav-link" href="{{ route('create.spp') }}">Tambah Data</a></li>
             </ul>
         </li>
     </ul>
 
     <div class=" mt-4 mb-4 p-3 hide-sidebar-mini">
-        <a href="" class="btn btn-primary btn-lg btn-block btn-icon-split">
+        <a href="{{ route('create.payment') }}" class="btn btn-primary btn-lg btn-block btn-icon-split">
             <i class="fas fa-plus"></i> Tambah Transaksi
         </a>
     </div>

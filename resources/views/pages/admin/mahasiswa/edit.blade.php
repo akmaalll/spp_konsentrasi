@@ -31,9 +31,10 @@
                     @csrf
 
                     <div class="form-row">
+                        <input type="hidden" name="id" id="">
                         <div class="form-group col-md-4">
-                            <label for="nisn">NIM</label>
-                            <input id="nisn" type="text" class="form-control" value="{{ $item->nim }}"
+                            <label for="nim">NIM</label>
+                            <input id="nim" type="text" class="form-control" value="{{ $item->nim }}"
                                 name="nim">
                         </div>
                         <div class="form-group col-md-8">

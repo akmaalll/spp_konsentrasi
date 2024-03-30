@@ -4,20 +4,18 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Jurusan;
-use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
 
-class MahasiswaController extends Controller
+class JurusanController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $items = Mahasiswa::get();
-        return view('pages.admin.mahasiswa.index', compact('items'));
+        $items = Jurusan::get();
+        return view('pages.admin.jurusan.index', compact('items'));
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -26,7 +24,7 @@ class MahasiswaController extends Controller
     {
         $jurusan = Jurusan::pluck('jurusan_name');
 
-        return view('pages.admin.mahasiswa.create', compact('jurusan'));
+        return view('pages.admin.jurusan.create', compact('jurusan'));
     }
 
     /**
@@ -35,20 +33,9 @@ class MahasiswaController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        // dd($data);
-        Mahasiswa::create($data);
+        Jurusan::create($data);
 
-        return redirect()->route('index.mahasiswa');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $nim)
-    {
-        $item = Mahasiswa::find($nim);
-
-        return view('pages.admin.mahasiswa.detail', compact('item'));
+        return redirect()->route('index.jurusan');
     }
 
     /**
@@ -56,10 +43,9 @@ class MahasiswaController extends Controller
      */
     public function edit(string $id)
     {
-        $item = Mahasiswa::find($id);
-        $jurusans = Jurusan::all();
+        $item = Jurusan::find($id);
 
-        return view('pages.admin.mahasiswa.edit', compact('item', 'jurusans'));
+        return view('pages.admin.jurusan.edit', compact('item',));
     }
 
     /**
@@ -68,11 +54,11 @@ class MahasiswaController extends Controller
     public function update(Request $request)
     {
         $data = $request->all();
-        $item = Mahasiswa::find($request->nim);
+        $item = Jurusan::find($request->id);
         // dd($item);
         $item->update($data);
 
-        return redirect()->route('index.mahasiswa');
+        return redirect()->route('index.jurusan');
     }
 
     /**
@@ -80,8 +66,8 @@ class MahasiswaController extends Controller
      */
     public function destroy(string $id)
     {
-        $item = Mahasiswa::findOrFail($id);
+        $item = Jurusan::findOrFail($id);
         $item->delete();
-        return redirect()->route('index.mahasiswa');
+        return redirect()->route('index.jurusan');
     }
 }

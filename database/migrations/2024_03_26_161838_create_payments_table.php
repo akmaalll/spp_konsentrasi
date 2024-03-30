@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('paid_month');
             $table->string('paid_year');
             $table->char('nim', 6);
+            $table->enum('status', ['unpaid', 'paid']);
             $table->foreignId('spp_id')->constrained('spps')->cascadeOnDelete();
             $table->foreign('nim')->references('nim')->on('mahasiswas')->cascadeOnDelete();
             $table->timestamps();

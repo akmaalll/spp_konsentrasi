@@ -1,6 +1,6 @@
 @extends('layouts.admin.dashboard')
 
-@section('title', 'Data Siswa')
+@section('title', 'Data Mahasiswa')
 @section('content')
 
     <section class="section">

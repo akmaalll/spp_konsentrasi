@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Spp extends Model
 {
     use HasFactory;
-    protected $fillable = ['year', 'semseter', 'nominal'];
+    protected $fillable = ['year', 'semester', 'nominal'];
 }

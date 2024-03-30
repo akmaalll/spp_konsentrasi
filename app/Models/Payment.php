@@ -21,6 +21,6 @@ class Payment extends Model
 
     public function fee(): HasOne
     {
-        return $this->hasOne(Jurusan::class, 'id','spp_id');
+        return $this->hasOne(Spp::class, 'id', 'spp_id');
     }
 }

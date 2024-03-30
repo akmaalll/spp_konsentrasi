@@ -21,21 +21,21 @@ class AuthController extends Controller
             'password' => ['required'],
         ]);
 
-        // dd(Auth::attempt($credentials));
+        // dd(Auth::guard('mahasiswa')->attempt($credentials));
         if (Auth::guard('mahasiswa')->attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended(route('dashboard'));
+            return redirect()->intended(route('dashboard_mahasiswa'));
         }
 
         if (Auth::guard('web')->attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended(route('dashboard'));
+            return redirect()->intended(route('dashboard_admin'));
         }
 
         return back()->withErrors([
-            'username' => 'ga terdaftar',
+            'username' => 'username atau password salah',
         ]);
     }
 
