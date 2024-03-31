@@ -10,8 +10,8 @@ class Payment extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'paid_at', 'amount', 'paid_month', 'paid_year',
-        'nim',  'spp_id',
+        'id','paid_at', 'amount', 'paid_month', 'paid_year',
+        'nim', 'status', 'spp_id',
     ];
 
     public function mahasiswa(): HasOne

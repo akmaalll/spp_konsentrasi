@@ -53,10 +53,14 @@
                                             {{ $item->status }}
                                         </td>
                                         <td>
-                                            <a href="" class="btn btn-primary">
-                                                bayar
-                                            </a>
+                                            <a href="{{ route('spp.mahasiswa.create'), $item->id }}" class="btn btn-primary">Bayar</a>
                                         </td>
+                                        {{-- <form action="{{ route('spp.mahasiswa.store') }}" method="POST">
+                                            @csrf
+                                            <td>
+                                                <button class="btn btn-primary" id="pay-button">Bayar</button>
+                                            </td>
+                                        </form> --}}
                                     </tr>
                                 @empty
                                 @endforelse
@@ -67,5 +71,10 @@
             </div>
         </div>
     </section>
+    @if (session()->has('snapToken'))
+        {{ session('snapToken') }}
+    @endif
+
+
 
 @endsection

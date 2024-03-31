@@ -6,7 +6,7 @@
 <!-- CSS Libraries -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
 <!-- Template CSS -->
-<link rel="stylesheet" href="{{ url('stisla/assets/css/style.css')}}">
-<link rel="stylesheet" href="{{ url('stisla/assets/css/components.css')}}">
+<link rel="stylesheet" href="{{ asset('stisla/assets/css/style.css')}}">
+<link rel="stylesheet" href="{{ asset('stisla/assets/css/components.css')}}">
 {{-- Lottie JS --}}
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

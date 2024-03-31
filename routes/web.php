@@ -77,6 +77,8 @@ Route::group(['prefix' => '', 'namespace' => 'App\Http\Controllers\mahasiswa', '
 
         Route::prefix('spp')->group(function () {
             Route::get('/', [SppController::class, 'index'])->name('spp.mahasiswa.index');
+            Route::get('/checkout', [SppController::class, 'create'])->name('spp.mahasiswa.create');
+            Route::post('/store', [SppController::class, 'store'])->name('spp.mahasiswa.store');
         });
     });
 });
