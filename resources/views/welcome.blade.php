@@ -24,7 +24,7 @@
                     </a>
                 </div>
                 <div class="col-md-5" data-aos="fade-up" data-aos-duration="1700">
-                    <img style="width: 80%" src="{{ url('main-assets/images/hero-image.png') }}" alt=""
+                    <img style="width: 80%" src="{{ asset('main-assets/images/hero-image.png') }}" alt=""
                         class="img-fluid d-none d-lg-block d-print-block float-md-end" srcset="" />
                 </div>
             </div>
@@ -109,12 +109,12 @@
                     </a>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-duration="1800">
-                    <img src="{{ url('main-assets/images/section-2.png') }}" class="img-fluid" alt="" />
+                    <img src="{{ asset('main-assets/images/section-2.png') }}" class="img-fluid" alt="" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4" data-aos="fade-up" data-aos-duration="1800">
-                    <img src="{{ url('main-assets/images/section-4.png') }}" class="img-fluid" alt="" />
+                    <img src="{{ asset('main-assets/images/section-4.png') }}" class="img-fluid" alt="" />
                 </div>
                 <div class="col-md-8 my-auto">
                     <p class="mb-3" data-aos="fade-up" data-aos-duration="1000"><i
@@ -153,7 +153,7 @@
                 <p class="lead">Tunggu apa lagi? segera coba aplikasi SPPIE agar anda dapat melihat history
                     pembayaran
                     anda dimana saja kapan saja</p>
-                <a class="text-white" href="{{ url('/auth') }}">Masuk
+                <a class="text-white" href="{{ route('login') }}">Masuk
                     &raquo;</a>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top p-2 p-md-4">
     <div class="container">
         <a class="navbar-brand" href="{{url('/')}}">
-            <img src="{{ url('stisla/assets/img/stisla-fill.svg')}}" width="40" height="40"
+            <img src="{{ asset('stisla/assets/img/stisla-fill.svg')}}" width="40" height="40"
                 class="d-inline-block align-top" alt="" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
@@ -27,7 +27,7 @@
                         href="{{url('kontak')}}">Kontak</a>
                 </li>
             </ul>
-            <a href=" {{ url('/auth')}}" class="btn btn-primary px-4 py-2">Masuk</a>
+            <a href=" {{ route('login')}}" class="btn btn-primary px-4 py-2">Masuk</a>
         </div>
     </div>
 </nav>

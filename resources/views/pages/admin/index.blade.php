@@ -59,6 +59,7 @@
                         <table id="example" class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
+                                    <th scope="col">ORDER ID</th>
                                     <th scope="col">NIM</th>
                                     <th scope="col">NAMA MAHASISWA</th>
                                     <th scope="col">JURUSAN</th>
@@ -72,6 +73,9 @@
                             <tbody>
                                 @forelse ($items as $item)
                                     <tr>
+                                        <th scope="row">
+                                            {{ $item->order_id }}
+                                        </th>
                                         <th scope="row">
                                             {{ $item->nim }}
                                         </th>
@@ -90,11 +94,15 @@
                                         <td>
                                             @currency($item->fee->nominal)
                                         </td>
-                                        <td>
-                                            {{-- <button class="btn btn-danger"> --}}
-                                            {{ $item->status }}
-                                            {{-- </button> --}}
-                                        </td>
+                                        @if ($item->status == 'paid')
+                                            <td>
+                                                <button class="btn btn-success">{{ $item->status }}</button>
+                                            </td>
+                                        @else
+                                            <td>
+                                                <button class="btn btn-warning">{{ $item->status }}</button>
+                                            </td>
+                                        @endif
 
                                         <td>
                                             {{-- <a href="" class="btn btn-primary">

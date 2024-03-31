@@ -28,9 +28,9 @@ class SppController extends Controller
      */
     public function create(Request $request)
     {
-        $orderId = 'PAY-' . Str::uuid()->toString();
 
-        $payment = Payment::where('nim', Auth::user()->nim)->with('mahasiswa', 'fee')->first();
+        $payment = Payment::where('nim', Auth::user()->nim)->where('status', 'unpaid')->with('mahasiswa', 'fee')->first();
+
         \Midtrans\Config::$serverKey = config('midtrans.server_key');
         \Midtrans\Config::$isProduction = config('midtrans.is_production');
         \Midtrans\Config::$isSanitized = true;
@@ -38,7 +38,7 @@ class SppController extends Controller
 
         $params = array(
             'transaction_details' => array(
-                'order_id' => $orderId,
+                'order_id' => $payment->order_id,
                 'gross_amount' => $payment->amount,
             ),
             'customer_details' => array(
@@ -47,6 +47,8 @@ class SppController extends Controller
                 'phone' => '',
             ),
         );
+        // dd($params);
+
 
         $snapToken = \Midtrans\Snap::getSnapToken($params);
 
@@ -59,10 +61,9 @@ class SppController extends Controller
         $hashed = hash('sha512', $request->order_id . $request->status_code . $request->gross_amount . $serverKey);
         if ($hashed == $request->signature_key) {
             if ($request->transaction_status == 'settlement') {
-                $order = Payment::find($request->order_id);
+                $order = Payment::where('order_id', $request->order_id);
                 // dd($order);
                 $order->update(['status' => 'paid']);
-                dd($order);
             }
         }
     }

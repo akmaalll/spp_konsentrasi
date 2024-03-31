@@ -49,12 +49,25 @@
                                         <td>
                                             {{ $item->fee->nominal }}
                                         </td>
-                                        <td>
-                                            {{ $item->status }}
-                                        </td>
-                                        <td>
-                                            <a href="{{ route('spp.mahasiswa.create'), $item->id }}" class="btn btn-primary">Bayar</a>
-                                        </td>
+                                        @if ($item->status == 'paid')
+                                            <td>
+                                                <button class="btn btn-success">{{ $item->status }}</button>
+                                            </td>
+                                        @else
+                                            <td>
+                                                <button class="btn btn-warning">{{ $item->status }}</button>
+                                            </td>
+                                        @endif
+                                        @if ($item->status == 'paid')
+                                            <td>
+                                                <button class="btn btn-primary">Bayar</button>
+                                            </td>
+                                        @else
+                                            <td>
+                                                <a href="{{ route('spp.mahasiswa.create'), $item->id }}"
+                                                    class="btn btn-primary">Bayar</a>
+                                            </td>
+                                        @endif
                                         {{-- <form action="{{ route('spp.mahasiswa.store') }}" method="POST">
                                             @csrf
                                             <td>

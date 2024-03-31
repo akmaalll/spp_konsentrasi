@@ -80,6 +80,7 @@
                         </div>
                     </div>
                     <input type="hidden" name="status" value="unpaid" id="">
+                    {{-- <input type="hidden" name="order_id" value="" id=""> --}}
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">simpan</button>
                     </div>

@@ -7,6 +7,7 @@ use App\Models\Mahasiswa;
 use App\Models\Payment;
 use App\Models\Spp;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PaymentController extends Controller
 {
@@ -48,8 +49,9 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
+        $orderId = 'PAY-' . Str::uuid()->toString();
         $data = $request->all();
-        // dd($data);
+        $data['order_id'] = $orderId;
         Payment::create($data);
 
         return redirect()->route('dashboard_admin');

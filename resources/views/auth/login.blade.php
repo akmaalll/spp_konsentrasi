@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Template CSS -->
-    <link rel="stylesheet" href="{{ url('stisla/assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ url('stisla/assets/css/components.css') }}">
+    <link rel="stylesheet" href="{{ asset('stisla/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('stisla/assets/css/components.css') }}">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
             <div class="d-flex flex-wrap align-items-stretch">
                 <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
                     <div class="p-4 m-3">
-                        <img src="{{ url('stisla/assets/img/stisla-fill.svg') }}" alt="logo" width="80"
+                        <img src="{{ asset('stisla/assets/img/stisla-fill.svg') }}" alt="logo" width="80"
                             class="shadow-light rounded-circle mb-5 mt-2">
                         <h4 class="text-dark font-weight-normal">Selamat datang di <span
                                 class="font-weight-bold">Sppie</span>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-12 order-lg-2 order-1 min-vh-100 background-walk-y position-relative overlay-gradient-bottom"
-                    data-background="{{ url('images/login-bg.jpg') }}">
+                    data-background="{{ asset('images/login-bg.jpg') }}">
                     <div class="absolute-bottom-left index-2">
                         <div class="text-light p-5 pb-2">
                             <div class="mb-5 pb-3">
@@ -99,10 +99,10 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="{{ url('stisla/assets/js/stisla.js') }}"></script>
+    <script src="{{ asset('stisla/assets/js/stisla.js') }}"></script>
     <!-- Template JS File -->
-    <script src="{{ url('stisla/assets/js/scripts.js') }}"></script>
-    <script src="{{ url('stisla/assets/js/custom.js') }}"></script>
+    <script src="{{ asset('stisla/assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('stisla/assets/js/custom.js') }}"></script>
 
 </body>
 
