@@ -1,6 +1,6 @@
 <footer class="main-footer">
     <div class="footer-left">
-        Copyright &copy; 2021 <div class="bullet"></div> Stisla By <a href="https://nauval.in/">Muhamad
-            Nauval Azhar</a> — Sppie by <a href="https://syau.me/">SYAUQIZAIDAN KHAIRAN KHALAF</a>
+        Copyright &copy; 2024 <div class="bullet"></div> Stisla By <a href="https://nauv.al/">Muhamad
+            Nauval Azhar</a> — Sppe by <a href="https://akml.vercel.app/">AKMAL RAYADIL FITRAH</a>
     </div>
 </footer>

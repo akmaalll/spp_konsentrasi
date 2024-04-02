@@ -7,9 +7,9 @@
         <div class="">
             <div class="card" style="width:100%;">
                 <div class="card-body">
-                    <h2 class="card-title" style="color: black;">TAMBAH DATA SISWA</h2>
+                    <h2 class="card-title" style="color: black;">TAMBAH DATA MAHASISWA</h2>
                     <hr>
-                    <p class="card-text"> Dihalaman ini anda dapat membuat data baru siswa, cukup isi data yang diperlukan
+                    <p class="card-text"> Dihalaman ini anda dapat membuat data baru mahasiswa, cukup isi data yang diperlukan
                         dibawah ini
                     </p>
                 </div>

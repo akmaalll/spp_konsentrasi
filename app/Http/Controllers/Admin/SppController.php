@@ -62,7 +62,7 @@ class SppController extends Controller
     {
         $data = $request->all();
         $item = Spp::find($request->id);
-        dd($item);
+        // dd($data);
         $item->update($data);
 
         return redirect()->route('index.spp');
@@ -73,6 +73,8 @@ class SppController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $item = Spp::findOrFail($id);
+        $item->delete();
+        return redirect()->route('index.spp');
     }
 }

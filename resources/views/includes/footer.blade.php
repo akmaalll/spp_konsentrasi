@@ -2,13 +2,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-1 d-none d-md-block">
-                <img src="{{url('main-assets/images/logosmkn1ciamis.png') }}" style="width: 75%" class="img-fluid" />
+                <img src="{{ asset('main-assets/images/logoUndipa.png') }}" style="width: 75%" class="img-fluid" />
             </div>
             <div class="col-md-5">
-                <p class="footer-header">SMKN 1 CIAMIS</p>
+                <p class="footer-header">UNIVERSITAS DIPA MAKASSAR</p>
                 <hr />
                 <p class="footer-core-info">
-                    <b>Layanan Contact SMKN 1 CIAMIS</b> <br />
+                    <b>Layanan Contact UNIVERSITAS DIPA MAKASSAR</b> <br />
                     Call Center : (022) 8827728 <br />
                     Formulir Pengaduan — <a href="#" class="text-white ">Link</a> <br />
                     Live Chat — <a href="#" class="text-white">Link</a> <br /><br />
@@ -29,20 +29,20 @@
             </div>
             <div class="col-md-4 ms-auto d-none d-md-block">
                 <ul class="footer-link" style="list-style: none">
-                    <a class="text-white" href="{{url('/')}}">
+                    <a class="text-white" href="{{ url('/') }}">
                         <li>Beranda</li>
                     </a>
-                    <a href="{{url('/tentang-kami')}}" class="text-white">
+                    <a href="{{ url('/tentang-kami') }}" class="text-white">
                         <li class="mt-3">Tentang Kami</li>
                     </a>
                     </a>
-                    <a href="{{url('/faq')}}" class="text-white">
+                    <a href="{{ url('/faq') }}" class="text-white">
                         <li class="mt-3">FAQ</li>
                     </a>
-                    <a href="{{url('/kontak')}}" class="text-white">
+                    <a href="{{ url('/kontak') }}" class="text-white">
                         <li class="mt-3">Hubungi Kami</li>
                     </a>
-                    <a href="{{url('/auth')}}" class="text-white">
+                    <a href="{{ route('login') }}" class="text-white">
                         <li class="mt-3">Masuk — Login</li>
                     </a>
                 </ul>

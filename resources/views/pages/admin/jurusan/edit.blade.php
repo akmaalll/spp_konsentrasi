@@ -5,14 +5,10 @@
         <div class="">
             <div class="card" style="width:100%;">
                 <div class="card-body">
-                    <h2 class="card-title" style="color: black;">Update Data Kelas</h2>
+                    <h2 class="card-title" style="color: black;">Update Data Jurusan</h2>
                     <hr>
-                    <p class="card-text"> Update data siswa meliputi Email dan Nama Lengkap.
-                        Kita tidak bisa mengubah password guru, Hanya guru yang dapat mengubah passwordnya
-                        sendiri.
+                    <p class="card-text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, ut!
                     </p>
-                    <a href="#detail" class="btn btn-primary">Saya paham dan
-                        ingin melanjutkan ⭢</a>
                 </div>
             </div>
         </div>
@@ -20,8 +16,6 @@
             <div class="col-md-12 text-center">
                 <p class="registration-title font-weight-bold display-4 mt-4" style="color:black; font-size: 50px;">
                     Update Jurusan</p>
-                <p style="line-height:-30px;margin-top:-20px;">Silahkan isi data data yang diperlukan
-                    dibawah </p>
                 <hr>
             </div>
             <div class="card-body">

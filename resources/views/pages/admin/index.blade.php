@@ -45,8 +45,22 @@
                             <h4>Transaksi</h4>
                         </div>
                         <div class="card-body">
-                            {{-- {{ DB::table('payments')->count() }} --}}
+                            {{ DB::table('payments')->count() }}
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h4>Selamat Datang, {{ Auth::user()->name }}!</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Jika anda ingin segera melakukan pembayaran atau melakukan transaksi SPP silahkan klik disini</p>
+                        <a href="{{ route('create.payment') }}" class="btn btn-primary btn-pill">Tambah Transaksi →</a>
                     </div>
                 </div>
             </div>
@@ -105,14 +119,12 @@
                                         @endif
 
                                         <td>
-                                            {{-- <a href="" class="btn btn-primary">
-                                                <i class="fa fa-eye"></i>
-                                            </a> --}}
-
-                                            @method('delete')
-                                            <button class="btn btn-danger">
-                                                <i class="fa fa-trash"></i>
-                                            </button>
+                                            <form action="{{ route('destroy.payment', $item->id) }}" method="POST">
+                                                @csrf
+                                                @method('delete')
+                                                <button class="btn btn-danger">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
                                             </form>
                                         </td>
                                     </tr>

@@ -8,10 +8,10 @@
         <div class="">
             <div class="card" style="width:100%;">
                 <div class="card-body">
-                    <h2 class="card-title" style="color: black;">UPDATE DATA SISWA</h2>
+                    <h2 class="card-title" style="color: black;">UPDATE DATA MAHASISWA</h2>
                     <hr>
-                    <p class="card-text"> Disini anda dapat mengupdate data siswa yang sebelumnya anda pilih. Perlu
-                        diketahui admin tidak dapat mengganti password siswa, hanya dapat mengganti data data yang tertera
+                    <p class="card-text"> Disini anda dapat mengupdate data mahasiswa yang sebelumnya anda pilih. Perlu
+                        diketahui admin tidak dapat mengganti password mahasiswa, hanya dapat mengganti data data yang tertera
                         dibawah.
                     </p>
                 </div>

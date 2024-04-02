@@ -49,7 +49,7 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
-        $orderId = 'PAY-' . Str::uuid()->toString();
+        $orderId = 'PAY-' . strtoupper(Str::random(5));
         $data = $request->all();
         $data['order_id'] = $orderId;
         Payment::create($data);
@@ -86,6 +86,8 @@ class PaymentController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $item = Payment::findOrFail($id);
+        $item->delete();
+        return redirect()->route('dashboard_admin');
     }
 }

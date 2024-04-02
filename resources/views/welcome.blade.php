@@ -13,10 +13,10 @@
                         SPP anda
                     </h1>
                     <p data-aos="fade-up" data-aos-duration="1300">
-                        SPPIE adalah sebuah website yang menyediakan sistem pembayaran SPP online untuk mempermudah
+                        SPPe adalah sebuah website yang menyediakan sistem pembayaran SPP online untuk mempermudah
                         pembayaran SPP anda agar dapat dilakukan dimanapun, kapanpun
                     </p>
-                    <a data-aos="fade-up" data-aos-duration="1500" href="{{ url('/auth') }}"
+                    <a data-aos="fade-up" data-aos-duration="1500" href="{{ route('login') }}"
                         class="btn btn-primary px-5 py-2 mb-2 mb-md-0">Mulai sekarang &nbsp; →
                     </a>
                     <a data-aos="fade-up" data-aos-duration="1700" href="#cara-lapor"
@@ -53,7 +53,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5" data-aos="fade-up" data-aos-duration="1600">
-                    <img src="{{ url('main-assets/images/body-image-1.webp') }}" class="img-fluid" alt=""
+                    <img src="{{ asset('main-assets/images/body-image-1.webp') }}" class="img-fluid" alt=""
                         srcset="" />
                 </div>
                 <div class="col-md-7 my-auto">
@@ -79,14 +79,14 @@
                 <div class="header-instruction text-center">
                     <div class="col-md-7 mx-auto">
                         <p class="text-primary label-top" data-aos="fade-up" data-aos-duration="1000">BAGAIMANA
-                            SPPIE
+                            SPPe
                             BEKERJA</p>
-                        <h1 data-aos="fade-up" data-aos-duration="1200">CARA LOGIN & PENGGUNAAN BAGI SISWA</h1>
+                        <h1 data-aos="fade-up" data-aos-duration="1200">CARA LOGIN & PENGGUNAAN BAGI MAHASISWA</h1>
                         <p data-aos="fade-up" data-aos-duration="1400">
                             {{-- Untuk anda yang masih baru kenal dengan kami, kami berikan
                             caranya kok dibawah bagaimana caranya untuk menggunakan aplikasi
                             ini --}}
-                            Cara masuk dan penggunaan pada aplikasi SPPIE, akan kami jelaskan secara rinci dibawah
+                            Cara masuk dan penggunaan pada aplikasi SPPe, akan kami jelaskan secara rinci dibawah
                             ini.
                         </p>
                     </div>
@@ -97,7 +97,7 @@
                     <p data-aos="fade-up" data-aos-duration="1000" class="mb-3"><i
                             class="lni lni-camera icon-top bg-primary px-3 py-2 text-center"></i></p>
                     <p data-aos="fade-up" data-aos-duration="1200" class="text-primary label-top">LANGKAH PERTAMA</p>
-                    <h1 data-aos="fade-up" data-aos-duration="1400" class="mt-2">Login ke aplikasi SPPIE Menggunakan
+                    <h1 data-aos="fade-up" data-aos-duration="1400" class="mt-2">Login ke aplikasi SPPe Menggunakan
                         Username & Password yang telah diberikan</h1>
                     <p data-aos="fade-up" data-aos-duration="1600">
                         Segera login dengan username & password yang telah diberikan, setelah itu anda dapat langsung
@@ -121,11 +121,10 @@
                             class="lni lni-lock icon-top bg-primary px-3 py-2 text-center"></i></p>
                     <p data-aos="fade-up" data-aos-duration="1200" class="text-primary label-top">LANGKAH KEDUA</p>
                     <h1 data-aos="fade-up" data-aos-duration="1400" class="mt-2">
-                        Segera pilih menu "Data SPP" di sidebar kiri anda, lalu anda dapat melihat history pembayaran
-                        SPP anda
+                        Silakan pilih opsi "Data SPP" di sidebar kiri Anda. Di sana, Anda dapat melihat riwayat pembayaran SPP dan dapat melakukan pembayaran dengan menekan tombol yang sesuai.
                     </h1>
                     <p data-aos="fade-up" data-aos-duration="1600">
-                        Setelah itu anda dapat melihat riwayat pembayaran anda dimana saja dan kapan saja!
+                        Setelah itu anda dapat melihat riwayat pembayaran dan membayar SPP anda dimana saja dan kapan saja!
                     </p>
                     <a href="{{ url('/faq') }}">
                         <p class="text-primary" style="text-decoration: none" data-aos="fade-up"
@@ -149,8 +148,8 @@
             0 33.5px 33.5px rgba(0, 0, 0, 0.034),
             0 53.4px 53.4px rgba(0, 0, 0, 0.039),
             0 100px 100px rgba(0, 0, 0, 0.05);">
-                <h1 class="fw-bold">Lakukan lebih dengan SPPIE</h1>
-                <p class="lead">Tunggu apa lagi? segera coba aplikasi SPPIE agar anda dapat melihat history
+                <h1 class="fw-bold">Lakukan lebih dengan SPPe</h1>
+                <p class="lead">Tunggu apa lagi? segera coba aplikasi SPPe agar anda dapat melihat history
                     pembayaran
                     anda dimana saja kapan saja</p>
                 <a class="text-white" href="{{ route('login') }}">Masuk

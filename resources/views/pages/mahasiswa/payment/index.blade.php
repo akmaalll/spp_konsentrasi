@@ -60,7 +60,7 @@
                                         @endif
                                         @if ($item->status == 'paid')
                                             <td>
-                                                <button class="btn btn-primary">Bayar</button>
+                                                <button class="btn btn-danger">Bayar</button>
                                             </td>
                                         @else
                                             <td>

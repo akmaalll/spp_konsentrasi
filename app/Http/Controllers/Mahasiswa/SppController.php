@@ -42,7 +42,7 @@ class SppController extends Controller
                 'gross_amount' => $payment->amount,
             ),
             'customer_details' => array(
-                'first_name' => $request->name,
+                'first_name' => $payment->mahasiswa->name ,
                 'last_name' => '',
                 'phone' => '',
             ),

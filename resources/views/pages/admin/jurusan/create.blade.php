@@ -7,14 +7,10 @@
         <div class="">
             <div class="card" style="width:100%;">
                 <div class="card-body">
-                    <h2 class="card-title" style="color: black;">TAMBAH DATA KELAS</h2>
+                    <h2 class="card-title" style="color: black;">TAMBAH DATA JURUSAN</h2>
                     <hr>
-                    <p class="card-text"> Update data siswa meliputi Email dan Nama Lengkap.
-                        Kita tidak bisa mengubah password guru, Hanya guru yang dapat mengubah passwordnya
-                        sendiri.
+                    <p class="card-text"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, blanditiis.
                     </p>
-                    <a href="#detail" class="btn btn-primary">Saya paham dan
-                        ingin melanjutkan ⭢</a>
                 </div>
             </div>
         </div>

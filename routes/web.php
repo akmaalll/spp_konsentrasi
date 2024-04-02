@@ -20,11 +20,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/tentang-kami', function () {
+    return view('/tentang-kami');
+});
+
+Route::get('/faq', function () {
+    return view('faq');
+});
+
+Route::get('/kontak', function () {
+    return view('kontak');
+});
+
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'prosesLogin']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
-
 
 Route::group(['prefix' => '', 'namespace' => 'App\Http\Controllers\admin', 'middleware' => 'auth:web'], function () {
 
@@ -66,6 +76,7 @@ Route::group(['prefix' => '', 'namespace' => 'App\Http\Controllers\admin', 'midd
         Route::get('/get-nama-spp', [PaymentController::class, 'getNamaSpp']);
         Route::get('/transaksi', [PaymentController::class, 'create'])->name('create.payment');
         Route::post('/transaksi/store', [PaymentController::class, 'store'])->name('store.payment');
+        Route::delete('/transaksi{id}', [PaymentController::class, 'destroy'])->name('destroy.payment');
     });
 });
 

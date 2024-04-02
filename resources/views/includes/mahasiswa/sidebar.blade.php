@@ -8,7 +8,8 @@
     <ul class="sidebar-menu">
         <li class="menu-header">Dashboard</li>
         <li class="nav-item dropdown active">
-            <a href="" class="nav-link"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+            <a href="{{ route('dashboard_mahasiswa') }}" class="nav-link"><i
+                    class="fas fa-desktop"></i><span>Dashboard</span></a>
         <li class="menu-header">History Data SPP</li>
         <li class="nav-item dropdown">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-dollar-sign"></i>

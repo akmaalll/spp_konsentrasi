@@ -26,10 +26,13 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @php
+                                    $no = 1;
+                                @endphp
                                 @forelse ($items as $item)
                                     <tr>
                                         <th scope="row">
-                                            {{ $item->id }}
+                                            {{ $no++ }}
                                         </th>
                                         <td>
                                             {{ $item->year }}
@@ -45,10 +48,13 @@
                                             <a href="{{ route('edit.spp', $item->id) }}" class="btn btn-info">
                                                 <i class="fa fa-pencil-alt"></i>
                                             </a>
-                                            @method('delete')
-                                            <button class="btn btn-danger">
-                                                <i class="fa fa-trash"></i>
-                                            </button>
+                                            <form action="{{ route('destroy.spp', $item->id) }}" method="POST"
+                                                class="d-inline">
+                                                @csrf
+                                                @method('delete')
+                                                <button class="btn btn-danger">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
                                             </form>
                                         </td>
                                     </tr>
