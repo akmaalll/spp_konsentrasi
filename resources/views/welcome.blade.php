@@ -24,7 +24,7 @@
                     </a>
                 </div>
                 <div class="col-md-5" data-aos="fade-up" data-aos-duration="1700">
-                    <img style="width: 80%" src="{{ asset('main-assets/images/hero-image.png') }}" alt=""
+                    <img style="width: 80%" src="{{ asset('main-assets/images/body-image-1.webp') }}" alt=""
                         class="img-fluid d-none d-lg-block d-print-block float-md-end" srcset="" />
                 </div>
             </div>

@@ -18,7 +18,7 @@
                         <table id="example" class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">NISN</th>
+                                    <th scope="col">NIM</th>
                                     <th scope="col">NAMA MAHASISWA</th>
                                     <th scope="col">JURUSAN</th>
                                     <th scope="col">SEMESTER</th>
@@ -60,7 +60,7 @@
                                         @endif
                                         @if ($item->status == 'paid')
                                             <td>
-                                                <button class="btn btn-danger">Bayar</button>
+                                                <button class="btn btn-danger" disabled>Bayar</button>
                                             </td>
                                         @else
                                             <td>

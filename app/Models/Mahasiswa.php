@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Model;
 use Illuminate\Notifications\Notifiable;
 
-class Mahasiswa extends Model 
+class Mahasiswa extends Model
 {
     use HasFactory, Notifiable;
 

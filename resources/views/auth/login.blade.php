@@ -24,7 +24,7 @@
                         <img src="{{ asset('stisla/assets/img/stisla-fill.svg') }}" alt="logo" width="80"
                             class="shadow-light rounded-circle mb-5 mt-2">
                         <h4 class="text-dark font-weight-normal">Selamat datang di <span
-                                class="font-weight-bold">Sppie</span>
+                                class="font-weight-bold">Sppe</span>
                         </h4>
                         <p class="text-muted">Sebelum Anda memulai, anda harus masuk dengan username dan password yang
                             telah disediakan.</p>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-12 order-lg-2 order-1 min-vh-100 background-walk-y position-relative overlay-gradient-bottom"
-                    data-background="{{ asset('images/login-bg.jpg') }}">
+                    data-background="{{ asset('images/kmps.jpg') }}">
                     <div class="absolute-bottom-left index-2">
                         <div class="text-light p-5 pb-2">
                             <div class="mb-5 pb-3">
@@ -80,7 +80,7 @@
                                 <h5 class="font-weight-normal text-muted-transparent">Silahkan login untuk masuk ke
                                     halaman dashboard.</h5>
                             </div>
-                            Sppie is made with <span class="text-danger">♥</span> by Syauqi
+                            Sppe is made with <span class="text-danger">♥</span> by AkmlRydlFtrh
                         </div>
                     </div>
                 </div>

@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>@yield('title', 'SPPe') — SPPe</title>
+    <title>@yield('title') — SPPe</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="SYAUQIZAIDAN KHAIRAN KHALAF">
-    <link rel="icon" type="image/png" href="{{ url('stisla/assets/img/stisla-fill.svg')}}" />
+    <link rel="icon" type="image/png" href="{{ url('stisla/assets/img/stisla-fill.svg') }}" />
     @include('includes.admin.style')
 </head>
 

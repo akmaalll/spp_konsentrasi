@@ -31,7 +31,7 @@
                     @csrf
 
                     <div class="form-row">
-                        <input type="hidden" name="id" id="">
+                        <input type="hidden" name="id">
                         <div class="form-group col-md-4">
                             <label for="nim">NIM</label>
                             <input id="nim" type="text" class="form-control" value="{{ $item->nim }}"

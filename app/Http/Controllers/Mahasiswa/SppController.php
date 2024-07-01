@@ -42,7 +42,7 @@ class SppController extends Controller
                 'gross_amount' => $payment->amount,
             ),
             'customer_details' => array(
-                'first_name' => $payment->mahasiswa->name ,
+                'first_name' => $payment->mahasiswa->name,
                 'last_name' => '',
                 'phone' => '',
             ),
@@ -71,9 +71,11 @@ class SppController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function invoice($id)
     {
-        //
+        $payment = Payment::find($id);
+
+        return view('pages.mahasiswa.payment.invoice', compact('payment'));
     }
 
     /**

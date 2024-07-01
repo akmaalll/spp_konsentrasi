@@ -65,5 +65,71 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-primary p-4">
+                    <div class="table-responsive">
+                        @if ($items->where('status', 'paid')->count() > 0)
+                            <table id="mhs" class="table align-items-center table-flush">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">NIM</th>
+                                        <th scope="col">NAMA MAHASISWA</th>
+                                        <th scope="col">JURUSAN</th>
+                                        <th scope="col">SEMESTER</th>
+                                        <th scope="col">TAHUN</th>
+                                        <th scope="col">TOTAL BAYAR</th>
+                                        <th scope="col">STATUS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse ($items as $item)
+                                        <tr>
+                                            <th scope="row">
+                                                {{ $item->nim }}
+                                            </th>
+                                            <td>
+                                                {{ $item->mahasiswa->name }}
+                                            </td>
+                                            <td>
+                                                {{ $item->mahasiswa->jurusan->jurusan_name }}
+                                            </td>
+                                            <td>
+                                                {{ $item->fee->semester }}
+                                            </td>
+                                            <td>
+                                                {{ $item->fee->year }}
+                                            </td>
+                                            <td>
+                                                {{ $item->fee->nominal }}
+                                            </td>
+                                            @if ($item->status == 'paid')
+                                                <td>
+                                                    <button class="btn btn-success">{{ $item->status }}</button>
+                                                </td>
+                                            @else
+                                                <td>
+                                                    <button class="btn btn-warning">{{ $item->status }}</button>
+                                                </td>
+                                            @endif
+                                            {{-- <form action="{{ route('spp.mahasiswa.store') }}" method="POST">
+                                            @csrf
+                                            <td>
+                                                <button class="btn btn-primary" id="pay-button">Bayar</button>
+                                            </td>
+                                        </form> --}}
+                                        </tr>
+                                    @empty
+                                    @endforelse
+                                </tbody>
+                            </table>
+                        @else
+                            <p>Tidak ada pembayaran dengan status 'paid'.</p>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 @endsection

@@ -8,8 +8,10 @@
             <div class="card-body">
                 <h2 class="card-title text-dark">PENGELOLAAN DATA MAHASISWA</h2>
                 <hr>
-                <p class="card-text">Berikut merupakan halaman pengelolaan data siswa di aplikasi SPPIE. Anda dapat melihat
-                    data siswa, mengupdate data siswa, menambahkan data siswa & menghapus data siswa di halaman ini </p>
+                <p class="card-text">Berikut merupakan halaman pengelolaan data mahasiswa di aplikasi SPPE. Anda dapat
+                    melihat
+                    data mahasiswa, mengupdate data mahasiswa, menambahkan data mahasiswa & menghapus data mahasiswa di
+                    halaman ini </p>
             </div>
         </div>
         <div class="row">
@@ -19,7 +21,7 @@
                         <table id="example" class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">ID</th>
+                                    <th scope="col">NO</th>
                                     <th scope="col">NIM</th>
                                     <th scope="col">NAMA</th>
                                     <th scope="col">USERNAME</th>
@@ -32,7 +34,7 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @forelse ($items as $item)
+                                @foreach ($items as $item)
                                     <tr>
                                         <th scope="row">
                                             {{ $no++ }}
@@ -69,8 +71,7 @@
                                             </form>
                                         </td>
                                     </tr>
-                                @empty
-                                @endforelse
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

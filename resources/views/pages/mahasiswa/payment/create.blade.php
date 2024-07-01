@@ -68,7 +68,7 @@
                 onSuccess: function(result) {
                     /* You may add your own implementation here */
                     alert("payment success!");
-                    window.location.href = '/mhs/spp'
+                    window.location.href = '/mhs/spp/invoice/{{ $payment->id }}'
                     console.log(result);
                 },
                 onPending: function(result) {

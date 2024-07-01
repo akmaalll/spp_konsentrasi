@@ -69,6 +69,64 @@
         <div class="row mb-4">
             <div class="col-md-12">
                 <div class="card card-primary">
+                    <div class="card-body">
+                        <form action="{{ route('dashboard_admin') }}" method="GET">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="nim">NIM</label>
+                                        <input type="text" class="form-control" id="nim" name="nim"
+                                            value="{{ request('nim') }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="jurusan">Jurusan</label>
+                                        <select class="form-control" id="jurusan" name="jurusan">
+                                            <option value="">All</option>
+                                            @foreach ($jurusans as $jurusan)
+                                                <option value="{{ $jurusan->id }}"
+                                                    {{ request('jurusan') == $jurusan->id ? 'selected' : '' }}>
+                                                    {{ $jurusan->jurusan_name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="semester">Semester</label>
+                                        <select class="form-control" id="semester" name="semester">
+                                            <option value="">All</option>
+                                            @foreach (range(1, 8) as $semester)
+                                                <option value="{{ $semester }}"
+                                                    {{ request('semester') == $semester ? 'selected' : '' }}>
+                                                    {{ $semester }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="year">Tahun</label>
+                                        <select class="form-control" id="year" name="year">
+                                            <option value="">All</option>
+                                            @foreach (range(date('Y') - 5, date('Y')) as $year)
+                                                <option value="{{ $year }}"
+                                                    {{ request('year') == $year ? 'selected' : '' }}>
+                                                    {{ $year }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 d-flex align-items-end">
+                                    <button type="submit" class="btn btn-primary">Filter</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                     <div class="table-responsive bg-white p-4">
                         <table id="example" class="table align-items-center table-flush">
                             <thead class="thead-light">
