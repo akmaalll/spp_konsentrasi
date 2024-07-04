@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>@yield('title', 'SPPIE') — SPPIE</title>
+    <title>@yield('title', 'Riwayat Pembayaran') — SPPIE</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="SYAUQIZAIDAN KHAIRAN KHALAF">
-    @include('includes.admin.style')
+    @include('includes.mahasiswa.style')
 </head>
 
 <body>

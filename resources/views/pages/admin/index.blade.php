@@ -72,14 +72,14 @@
                     <div class="card-body">
                         <form action="{{ route('dashboard_admin') }}" method="GET">
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-12 col-md-6 col-lg-3 mb-3">
                                     <div class="form-group">
                                         <label for="nim">NIM</label>
                                         <input type="text" class="form-control" id="nim" name="nim"
                                             value="{{ request('nim') }}">
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-12 col-md-6 col-lg-3 mb-3">
                                     <div class="form-group">
                                         <label for="jurusan">Jurusan</label>
                                         <select class="form-control" id="jurusan" name="jurusan">
@@ -93,7 +93,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-6 col-md-6 col-lg-3 mb-3">
                                     <div class="form-group">
                                         <label for="semester">Semester</label>
                                         <select class="form-control" id="semester" name="semester">
@@ -107,7 +107,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-6 col-md-6 col-lg-3 mb-3">
                                     <div class="form-group">
                                         <label for="year">Tahun</label>
                                         <select class="form-control" id="year" name="year">
@@ -121,7 +121,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-2 d-flex align-items-end">
+                                <div class="col-12 col-lg-2 d-flex align-items-end">
                                     <button type="submit" class="btn btn-primary">Filter</button>
                                 </div>
                             </div>

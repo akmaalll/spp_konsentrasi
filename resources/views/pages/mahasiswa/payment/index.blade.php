@@ -47,7 +47,7 @@
                                             {{ $item->fee->year }}
                                         </td>
                                         <td>
-                                            {{ $item->fee->nominal }}
+                                            @currency($item->fee->nominal)
                                         </td>
                                         @if ($item->status == 'paid')
                                             <td>
@@ -58,7 +58,7 @@
                                                 <button class="btn btn-warning">{{ $item->status }}</button>
                                             </td>
                                         @endif
-                                        @if ($item->status == 'paid')
+                                        @if ($item->status == 'paid' || $item->paid_at < date('Y-m-d'))
                                             <td>
                                                 <button class="btn btn-danger" disabled>Bayar</button>
                                             </td>
@@ -87,7 +87,5 @@
     @if (session()->has('snapToken'))
         {{ session('snapToken') }}
     @endif
-
-
 
 @endsection

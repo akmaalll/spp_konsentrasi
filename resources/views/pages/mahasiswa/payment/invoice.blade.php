@@ -23,7 +23,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive bg-white p-4">
-                                <table id="invoice" class="table align-items-center table-flush">
+                                <table id="mhs" class="table align-items-center table-flush">
                                     <thead>
                                         <tr>
                                             <th>Field</th>

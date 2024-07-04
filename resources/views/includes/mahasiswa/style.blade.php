@@ -5,12 +5,8 @@
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 <!-- CSS Libraries -->
-<link rel="stylesheet" href="../node_modules/jqvmap/dist/jqvmap.min.css">
-<link rel="stylesheet" href="../node_modules/weathericons/css/weather-icons.min.css">
-<link rel="stylesheet" href="../node_modules/weathericons/css/weather-icons-wind.min.css">
-<link rel="stylesheet" href="../node_modules/summernote/dist/summernote-bs4.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
 
 <!-- Template CSS -->
-<link rel="stylesheet" href="{{ asset('stisla/assets/css/style.css')}}">
-<link rel="stylesheet" href="{{ asset('stisla/assets/css/components.css')}}">
+<link rel="stylesheet" href="{{ asset('stisla/assets/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('stisla/assets/css/components.css') }}">

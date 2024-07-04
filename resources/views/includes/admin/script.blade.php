@@ -32,7 +32,7 @@
 } );
 </script>
 <!-- Template JS File -->
-<script src="{{ url('stisla/assets/js/scripts.js') }}"></script>
-<script src="{{ url('stisla/assets/js/custom.js') }}"></script>
+<script src="{{ asset('stisla/assets/js/scripts.js') }}"></script>
+<script src="{{ asset('stisla/assets/js/custom.js') }}"></script>
 <!-- Page Specific JS File -->
-<script src="{{ url('stisla/assets/js/page/index-0.js') }}"></script>
+<script src="{{ asset('stisla/assets/js/page/index-0.js') }}"></script>

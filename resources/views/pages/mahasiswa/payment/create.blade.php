@@ -43,8 +43,8 @@
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="nominal">NOMINAL</label>
-                        <input id="nominal" type="text" value="{{ $payment->fee->nominal }}" class="form-control"
-                            name="nominal" readonly>
+                        <input id="nominal" type="text" value="@currency($payment->fee->nominal)" class="form-control" name="nominal"
+                            readonly>
                     </div>
                 </div>
                 <div class="form-group">

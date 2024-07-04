@@ -84,6 +84,7 @@
                                 </thead>
                                 <tbody>
                                     @forelse ($items as $item)
+                                       
                                         <tr>
                                             <th scope="row">
                                                 {{ $item->nim }}
@@ -101,7 +102,7 @@
                                                 {{ $item->fee->year }}
                                             </td>
                                             <td>
-                                                {{ $item->fee->nominal }}
+                                                @currency($item->fee->nominal)
                                             </td>
                                             @if ($item->status == 'paid')
                                                 <td>
